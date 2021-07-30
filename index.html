@@ -18,11 +18,13 @@
   <body>
     <main class="container">
       <div class="box-shadow"></div>
+
       <img
         class="box"
         src="./images/illustration-box-desktop.svg"
         alt="foreground animated hovering box image"
       />
+
       <div class="card-images">
         <img
           class="card-bg-image"
@@ -30,74 +32,73 @@
           alt="background pattern image desktop"
         />
         <img
+          class="card-bg-image-mobile"
+          src="./images/bg-pattern-mobile.svg"
+          alt=""
+        />
+        <img
           class="woman-image-desktop"
           src="./images/illustration-woman-online-desktop.svg"
           alt="foreground card image of animated woman on computer"
         />
+        <img
+          class="woman-image-mobile"
+          src="./images/illustration-woman-online-mobile.svg"
+          alt=""
+        />
       </div>
+
       <div class="card-faq">
         <h1>FAQ</h1>
-        <div class="question1">
-          <h2>How many team members can I invite?</h2>
-          <img
-            class="arrow"
-            src="./images/icon-arrow-down.svg"
-            alt="alternating down and up arrow"
-          />
+
+        <button class="accordion top">
+          How many team members can I invite?
+        </button>
+        <div class="panel">
+          <p>
+            You can invite up to 2 additional users on the Free plan. There is
+            no limit on team members for the Premium plan.
+          </p>
         </div>
-        <p>
-          You can invite up to 2 additional users on the Free plan. There is no
-          limit on team members for the Premium plan.
-        </p>
-        <div class="question2">
-          <h2>What is the maximum file upload size?</h2>
-          <img
-            class="arrow"
-            src="./images/icon-arrow-down.svg"
-            alt="alternating down and up arrow"
-          />
+        <div class="divider"></div>
+
+        <button class="accordion">What is the maximum file upload size?</button>
+        <div class="panel">
+          <p>
+            No more than 2GB. All files in your account must fit your allotted
+            storage space.
+          </p>
         </div>
-        <p>
-          No more than 2GB. All files in your account must fit your allotted
-          storage space.
-        </p>
-        <div class="question3">
-          <h2>How do I reset my password?</h2>
-          <img
-            class="arrow"
-            src="./images/icon-arrow-down.svg"
-            alt="alternating down and up arrow"
-          />
+        <div class="divider"></div>
+
+        <button class="accordion">How do I reset my password?</button>
+        <div class="panel">
+          <p>
+            Click “Forgot password” from the login page or “Change password”
+            from your profile page. A reset link will be emailed to you.
+          </p>
         </div>
-        <p>
-          Click “Forgot password” from the login page or “Change password” from
-          your profile page. A reset link will be emailed to you.
-        </p>
-        <div class="question4">
-          <h2>Can I cancel my subscription?</h2>
-          <img
-            class="arrow"
-            src="./images/icon-arrow-down.svg"
-            alt="alternating down and up arrow"
-          />
+        <div class="divider"></div>
+
+        <button class="accordion">Can I cancel my subscription?</button>
+        <div class="panel">
+          <p>
+            Yes! Send us a message and we’ll process your request no questions
+            asked.
+          </p>
         </div>
-        <p>
-          Yes! Send us a message and we’ll process your request no questions
-          asked.
-        </p>
-        <div class="question5">
-          <h2>Do you provide additional support?</h2>
-          <img
-            class="arrow"
-            src="./images/icon-arrow-down.svg"
-            alt="alternating down and up arrow"
-          />
+        <div class="divider"></div>
+
+        <button class="accordion">Do you provide additional support?</button>
+        <div class="panel">
+          <p>
+            Chat and email support is available 24/7. Phone lines are open
+            during normal business hours.
+          </p>
         </div>
-        <p>
-          Chat and email support is available 24/7. Phone lines are open during
-          normal business hours.
-        </p>
+        <div class="divider"></div>
       </div>
     </main>
+    <script src="./index.js"></script>
   </body>
 </html>

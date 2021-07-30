@@ -35,9 +35,14 @@
   height: 100vh;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(14, 1fr);
   grid-template-areas:
     ". . . . . . . . . . . ."
     ". . . . . . . . . . . ."
+    ". . one one one one two two two two . ."
+    ". . one one one one two two two two . ."
+    ". . one one one one two two two two . ."
+    ". . one one one one two two two two . ."
     ". . one one one one two two two two . ."
     ". . one one one one two two two two . ."
     ". . one one one one two two two two . ."
@@ -75,59 +80,178 @@
   justify-content: space-evenly;
   background-color: #ffffff;
   border-radius: 0 1.5rem 1.5rem 0;
-  padding: 2rem 2rem 2rem 0;
+  padding: 2rem 8rem 3rem 0;
 }
 
-.card-faq h1 {
-  color: var(--very-dark-blue);
+.top {
+  padding-top: 1rem;
 }
 
-.card-faq h2 {
+.accordion {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  text-align: left;
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
   color: var(--very-dark-grayish-blue);
+  transition: 400ms;
+  display: flex;
+  justify-content: space-between;
 }
 
-.card-faq h2:hover {
+.accordion:after {
+  content: url(./images/icon-arrow-down.svg);
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.accordion:hover {
   font-size: 0.875rem;
   font-weight: 400;
   color: var(--soft-red);
   cursor: pointer;
 }
 
-.card-faq p {
-  font-size: 0.75rem;
+.active {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--very-dark-grayish-blue);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.active:after {
+  content: url(./images/icon-arrow-down.svg);
+  transform: rotate(180deg);
+}
+
+.panel {
+  display: none;
+  overflow: hidden;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.panel p {
   color: var(--dark-grayish-blue);
-  border-bottom: 1px solid var(--light-grayish-blue);
-  padding: 1rem 0;
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.card-faq h1 {
+  color: var(--very-dark-blue);
 }
 
 .box {
   position: absolute;
-  transform: translate(9.5rem, 18.75rem);
+  transform: translate(85%, 160%);
   z-index: 2;
   height: 11.688rem;
   width: 11.25rem;
+  margin: 0 auto;
 }
 
 .box-shadow {
   background-color: transparent;
   grid-column: 3 / 11;
-  grid-row: 3 / 9;
+  grid-row: 3 / 13;
   box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.4972);
 }
 
-.question1,
-.question2,
-.question3,
-.question4,
-.question5 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 1rem;
+.divider {
+  border-bottom: 1px solid var(--light-grayish-blue);
+  height: 1px;
+  width: 100%;
 }
 
-.arrow {
-  background-position: center;
+.card-bg-image-mobile {
+  display: none;
+}
+
+.woman-image-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(14, 1fr);
+    grid-template-areas:
+      ". . . . . . . . . . . ."
+      ". . . . . . . . . . . ."
+      ". . . . . . . . . . . ."
+      ". . one one one one one one one one . ."
+      ". . one one one one one one one one . ."
+      ". . two two two two two two two two . ."
+      ". . two two two two two two two two . ."
+      ". . two two two two two two two two . ."
+      ". . two two two two two two two two . ."
+      ". . two two two two two two two two . ."
+      ". . two two two two two two two two . ."
+      ". . two two two two two two two two . ."
+      ". . two two two two two two two two . ."
+      ". . . . . . . . . . . .";
+    background-image: linear-gradient(var(--soft-violet), var(--soft-blue));
+    font-family: "Kumbh Sans", sans-serif;
+  }
+
+  .card-images {
+    grid-area: one;
+    background-color: #ffffff;
+    position: relative;
+    border-radius: 1.5rem 1.5rem 0 0;
+    overflow: visible;
+  }
+
+  .box {
+    display: none;
+  }
+
+  .box-shadow {
+    grid-column: 3 / 11;
+    grid-row: 4 / 14;
+  }
+
+  .card-bg-image {
+    display: none;
+  }
+
+  .card-bg-image-mobile {
+    display: block;
+    transform: translate(2.5rem, -0.5rem);
+  }
+
+  .woman-image-desktop {
+    display: none;
+  }
+
+  .woman-image-mobile {
+    display: block;
+    position: absolute;
+    transform: translate(1rem, -13.25rem);
+  }
+
+  .card-faq {
+    border-radius: 0 0 1.5rem 1.5rem;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 2rem;
+    justify-content: space-between;
+  }
+
+  .card-faq h1 {
+    padding-bottom: 2rem;
+  }
+
+  .card-faq p {
+    text-align: left;
+  }
 }
