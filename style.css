@@ -1,0 +1,78 @@
+/* Imports */
+
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+/* Variables */
+
+:root {
+  /* Text */
+  --very-dark-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+
+  --very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --dark-grayish-blue: hsl(240, 6%, 50%);
+
+  /* Gradient */
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+
+  /* Dividers */
+
+  --light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+/* Reset */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Main Styles */
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-areas:
+    ". . . . . . . . . . . ."
+    ". . . . . . . . . . . ."
+    ". . . . . . . . . . . ."
+    ". . . . . . . . . . . ."
+    ". . one one one one two two two two . ."
+    ". . one one one one two two two two . ."
+    ". . one one one one two two two two . ."
+    ". . one one one one two two two two . ."
+    ". . one one one one two two two two . ."
+    ". . . . . . . . . . . ."
+    ". . . . . . . . . . . ."
+    ". . . . . . . . . . . ."
+    ". . . . . . . . . . . .";
+  background-image: linear-gradient(var(--soft-violet), var(--soft-blue));
+}
+
+.card-images {
+  grid-area: one;
+  background-color: #ffffff;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-bg-image {
+  position: absolute;
+  transform: translate(-36.5rem, -18.5rem);
+}
+
+.woman-image-desktop {
+  position: absolute;
+  transform: translate(-5.5rem, 4rem);
+}
+
+.card-faq {
+  grid-area: two;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #ffffff;
+}
