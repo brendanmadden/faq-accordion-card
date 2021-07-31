@@ -110,7 +110,8 @@
   margin-left: 5px;
 }
 
-.accordion:hover {
+.accordion:hover,
+.accordion:active {
   font-size: 0.875rem;
   font-weight: 400;
   color: var(--soft-red);
@@ -313,7 +314,7 @@
   .woman-image-mobile {
     display: block;
     position: absolute;
-    transform: translate(2.25rem, -12.5rem);
+    transform: translate(2.5rem, -12.5rem);
     width: 14.813rem;
     height: 11.25rem;
   }
